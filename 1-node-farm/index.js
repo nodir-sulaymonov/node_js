@@ -16,6 +16,7 @@ fs.readFile('./txt/start.txt', 'utf8',(err, data1) => {
             console.log(data3);
 
             fs.writeFile(`./txt/final.txt`,`${data2}\n${data3}`, `utf8`,err => {
+                if (err) return console.log('Error 💥');
                 console.log('You are file has been written to:\n');
             })
         });
